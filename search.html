@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Search</title>
+</head>
+<body>
+    <h1>Type something in the search bar:</h1>
+    <input type="text" id="searchBar" placeholder="Search..." oninput="sendSearchData()">
+    <div id="displaySearch">Your search will appear here...</div>
+
+    <script>
+        const socket = new WebSocket('ws://localhost:5000');  // Connect to the WebSocket server
+
+        // Send data to the server whenever the user types
+        function sendSearchData() {
+            const searchInput = document.getElementById('searchBar').value;
+            socket.send(searchInput);  // Send search data to the server
+        }
+
+        // When the server sends back data, display it
+        socket.onmessage = function(event) {
+            document.getElementById('displaySearch').textContent = event.data;
+        };
+    </script>
+</body>
+</html>
