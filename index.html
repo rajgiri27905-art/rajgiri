@@ -14,29 +14,29 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Smooth purple to blue gradient */
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            color: #fff;
+            color: #333;
         }
 
         /* Main container */
         .container {
-            background: #1f1f1f; /* Dark grey background for the container */
+            background-color: #fff;
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
-            width: 350px;
+            width: 320px;
             transition: all 0.3s ease;
         }
 
         /* Hover effect for container */
         .container:hover {
             transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
 
         /* Logo styling */
@@ -61,27 +61,25 @@
             font-weight: bold;
             font-size: 18px;
             text-align: left;
-            color: #fff;
+            color: #333;
         }
 
         .login-form input {
             padding: 12px;
             margin-bottom: 20px;
-            border: 1px solid #444;
+            border: 1px solid #ddd;
             border-radius: 6px;
             font-size: 16px;
-            background-color: #2a2a2a;
-            color: #fff;
             transition: border-color 0.3s ease;
         }
 
         .login-form input:focus {
-            border-color: #2575fc;
+            border-color: #ff7e5f;
             outline: none;
         }
 
         .login-form button {
-            background-color: #2575fc;
+            background-color: #ff7e5f;
             color: white;
             padding: 12px;
             border: none;
@@ -92,7 +90,7 @@
         }
 
         .login-form button:hover {
-            background-color: #6a11cb;
+            background-color: #feb47b;
         }
 
         /* Responsive Design for Mobile */
